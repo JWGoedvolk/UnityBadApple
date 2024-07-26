@@ -2637,7 +2637,7 @@ MonoBehaviour:
   processedCanvas: {fileID: 894400524}
   frameCanvas: {fileID: 754348989}
   currentIndex: -1
-  dimension: {x: 0, y: 0}
+  dimension: {x: 482, y: 365}
   pixelPos: {x: 0, y: 0}
   preview: {fileID: 1688355536}
   previewScale: {x: 1, y: 1, z: 1}
@@ -2678,7 +2678,8 @@ MonoBehaviour:
   createPreview: 0
   framePreview: 0
   multiProcess: 420
-  audioPlaying: 0
+  audioPlaying: 1
+  fps: 5
 --- !u!82 &1351028800
 AudioSource:
   m_ObjectHideFlags: 0

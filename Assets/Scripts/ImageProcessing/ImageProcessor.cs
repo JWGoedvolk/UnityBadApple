@@ -48,6 +48,7 @@ namespace JW.BadApple.Images.Processor
         [SerializeField] private bool framePreview = false;
         [SerializeField] private int multiProcess = 1;
         [SerializeField] private bool audioPlaying = false;
+        [SerializeField] private int fps = -1;
         #endregion
 
         #region Public Functions
@@ -89,10 +90,12 @@ namespace JW.BadApple.Images.Processor
         // Start is called before the first frame update
         void Start()
         {
+            Application.targetFrameRate = fps;
+
             currentIndex = -1;
             NextFrame();
             //musicSource.clip = music;
-            //musicSource.Play();
+            if (audioPlaying) { musicSource.Play(); }
             // Can run the program at runtime or 1 character every frame
             if (usingRuntime)
             {
@@ -195,7 +198,7 @@ namespace JW.BadApple.Images.Processor
             textDisplayer.UpdateTextUI(text);
 
             pixelPos.x += width;
-            //UpdatePreview((pixelPos.x - charWidth) * previewScale.x, pixelPos.y * previewScale.y);
+            UpdatePreview((pixelPos.x - charWidth) * previewScale.x, pixelPos.y * previewScale.y);
             if (pixelPos.x >= dimension.x - charWidth) // Did we complete the line
             {
                 // Calculate new positions
@@ -204,7 +207,7 @@ namespace JW.BadApple.Images.Processor
 
                 text = text + "\n"; // Go to the next line in the string
                 textDisplayer.UpdateTextUI(text);
-                //UpdatePreview(pixelPos.x * previewScale.x, pixelPos.y * previewScale.y);
+                UpdatePreview(pixelPos.x * previewScale.x, pixelPos.y * previewScale.y);
 
                 // Stop when we reach the bottom
                 if (pixelPos.y < 0)
