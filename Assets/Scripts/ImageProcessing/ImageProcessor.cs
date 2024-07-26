@@ -195,10 +195,10 @@ namespace JW.BadApple.Images.Processor
         private bool MovePixelPos(int width, int height)
         {
             bool isFinished = false;
-            textDisplayer.UpdateTextUI(text);
+            //textDisplayer.UpdateTextUI(text);
 
             pixelPos.x += width;
-            UpdatePreview((pixelPos.x - charWidth) * previewScale.x, pixelPos.y * previewScale.y);
+            //UpdatePreview((pixelPos.x - charWidth) * previewScale.x, pixelPos.y * previewScale.y);
             if (pixelPos.x >= dimension.x - charWidth) // Did we complete the line
             {
                 // Calculate new positions
@@ -206,8 +206,8 @@ namespace JW.BadApple.Images.Processor
                 pixelPos.x = 0;
 
                 text = text + "\n"; // Go to the next line in the string
-                textDisplayer.UpdateTextUI(text);
-                UpdatePreview(pixelPos.x * previewScale.x, pixelPos.y * previewScale.y);
+                //textDisplayer.UpdateTextUI(text);
+                //UpdatePreview(pixelPos.x * previewScale.x, pixelPos.y * previewScale.y);
 
                 // Stop when we reach the bottom
                 if (pixelPos.y < 0)
@@ -215,6 +215,7 @@ namespace JW.BadApple.Images.Processor
                     // Add the text string to the list of converted strings and clear it for the next image
                     textDisplayer.UpdateTextUI(text);
                     texts.Add(text);
+                    textDisplayer.UpdateTextUI(text);
                     text = "";
 
                     //isFinished = true; // Set the done flag to true
