@@ -78,7 +78,7 @@ namespace JW.BadApple.Images.Processor
             {
                 currentIndex = 0;
                 isDone = true;
-                Debug.Log(Time.time);
+                //Debug.Log(Time.time);
                 // Return unsuccesfull
                 return false;
             }
@@ -174,7 +174,7 @@ namespace JW.BadApple.Images.Processor
             // Display info about the frame
             frameCanvas.texture = texture[currentIndex];
             string name = texture[currentIndex].name;
-            Debug.Log($"{name}: Width: {dimension.x}, Height: {dimension.y}");
+            //Debug.Log($"{name}: Width: {dimension.x}, Height: {dimension.y}");
 
             // Reset pixel position and preview position
             pixelPos.x = 0;
@@ -237,8 +237,8 @@ namespace JW.BadApple.Images.Processor
 
             // Add it to the string
             text = text + areaChar;
-            Debug.Log($"({pixelPos.x}, {pixelPos.y}): {luminance} = {areaChar}");
-            Debug.LogWarning($"|{text}|");
+            //Debug.Log($"({pixelPos.x}, {pixelPos.y}): {luminance} = {areaChar}");
+            //Debug.LogWarning($"|{text}|");
         }
 
         private Color GetAreaAverage(int x, int y, int cw, int ch)
