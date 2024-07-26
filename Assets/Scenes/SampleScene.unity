@@ -2676,7 +2676,7 @@ MonoBehaviour:
   usingRuntime: 0
   autoAdvancing: 1
   createPreview: 0
-  framePreview: 0
+  framePreview: 1
   multiProcess: 420
   audioPlaying: 0
   fps: 5
@@ -2687,11 +2687,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351028797}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4ffb0dadb051b474da1c06d4a8b6fd37, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

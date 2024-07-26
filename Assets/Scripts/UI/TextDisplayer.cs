@@ -61,5 +61,10 @@ public class TextDisplayer : MonoBehaviour
             textCanvas.text = newText;
         }
     }
+
+    public void ShowDone()
+    {
+        textCanvas.color = Color.green;
+    }
     #endregion
 }

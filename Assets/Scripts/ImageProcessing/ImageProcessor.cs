@@ -56,7 +56,16 @@ namespace JW.BadApple.Images.Processor
         {
             currentIndex += 1;
             pixelPos.x = 0;
-            currentTexture = texture[currentIndex];
+
+            // Get the texture of the current frame, otherwise make the text green.
+            if (texture[currentIndex] != null)
+            {
+                currentTexture = texture[currentIndex];
+            }
+            else
+            {
+                textDisplayer.ShowDone();
+            }
             if (currentIndex < texture.Count)
             {
                 dimension.x = currentTexture.width;
